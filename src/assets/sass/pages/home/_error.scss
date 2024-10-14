@@ -1,0 +1,32 @@
+.error {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-color: hsl(var(--base)/0.03);
+
+    h3 {
+        font-weight: 700;
+        font-size: 16rem;
+        margin-bottom: 0;
+        color: transparent;
+        -webkit-text-stroke: 6px hsl(var(--base));
+
+        @media only screen and (max-width: 1199px) {
+            font-size: 10rem;
+        }
+
+        @media only screen and (max-width: 551px) {
+            font-size: 7rem;
+        }
+    }
+
+    h4 {
+        font-weight: 400;
+        margin: auto;
+        margin-bottom: 50px;
+        font-size: 28px;
+    }
+}

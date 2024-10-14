@@ -1,0 +1,52 @@
+.testimonial {
+    overflow: hidden;
+
+    .card {
+        border: none;
+        border-radius: 8px;
+        padding: 18px 15px;
+        margin-top: 20px;
+        border: 5px solid hsl(var(--base)/0.05);
+
+        .profile {
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                margin-right: 20px;
+            }
+
+            h5 {
+                margin-bottom: 0;
+                margin-top: 5px;
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+        }
+
+        .star {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+
+            i {
+                color: hsl(var(--base));
+                font-size: 18px;
+            }
+
+            p {
+                font-weight: 400;
+                color: hsl(var(--dark));
+                margin-left: 3px;
+            }
+        }
+
+        .bottom {
+            p {
+                color: hsl(var(--dark)/0.7);
+            }
+        }
+    }
+}

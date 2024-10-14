@@ -1,0 +1,22 @@
+/*====================== Selection Style ====================*/
+::selection {
+    color: hsl(var(--white));
+    background: hsl(var(--base));
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--base));
+    border: 0px solid transparent;
+    border-radius: 2px;
+
+}

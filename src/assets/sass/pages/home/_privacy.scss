@@ -1,0 +1,72 @@
+/*========== Privacy page Style ==========*/
+.policy {
+    position: relative;
+    overflow: hidden;
+
+    .body {
+        p {
+            color: hsl(var(--dark));
+            letter-spacing: 0.8px;
+            line-height: 30px;
+        }
+
+        span {
+            color: hsl(var(--dark));
+        }
+
+        h4 {
+            font-weight: 600;
+        }
+    }
+
+    .thumb {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        img {
+            width: 150px;
+            opacity: 0.1;
+        }
+    }
+
+
+
+    .info-wrap li i {
+        margin-right: 15px;
+        font-size: 8px;
+        color: hsl(var(--black)/0.5);
+        margin-top: 7px;
+    }
+
+    .left-side {
+        border: 1px solid hsl(var(--dark)/0.1);
+        padding: 16px;
+        position: sticky;
+        top: 220px;
+
+        a {
+            color: hsl(var(--dark));
+            width: 100%;
+            margin-bottom: 20px;
+            font-weight: 600;
+
+            &:hover {
+                color: hsl(var(--base));
+                font-size: 17px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .info {
+        margin-bottom: 30px;
+
+        h4 {
+            margin-bottom: 12px;
+        }
+    }
+}

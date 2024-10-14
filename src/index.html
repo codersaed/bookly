@@ -1,0 +1,237 @@
+<!-- meta tags and other links -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title> Bookly</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <!-- Slick -->
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <!-- line awesome -->
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+  <!-- Odometer -->
+  <link rel="stylesheet" href="assets/css/odometer.css">
+  <!-- Main css -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- animate -->
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <!-- lightcase css -->
+  <link rel="stylesheet" href="assets/css/lightcase.css">
+</head>
+
+<body>
+
+  <!--==================== Preloader Start ====================-->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+  <!--==================== Preloader End ====================-->
+
+  <!--==================== Overlay Start ====================-->
+  <div class="body-overlay"></div>
+  <!--==================== Overlay End ====================-->
+
+  <!-- ==================== Scroll to Top End Here ==================== -->
+  <a class="scroll-top"><i class="fa-solid fa-angle-up"></i></a>
+  <!-- ==================== Scroll to Top End Here ==================== -->
+<!-- ==================== Header End Here ==================== -->
+<div class="header" id="header">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
+            <button class="navbar-toggler header-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span id="hiddenNav"><i class="las la-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-menu mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="wishlist.html">Wishlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="coming.html">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="coming.html">About Us</a>
+                    </li>
+                </ul>
+                <div class="nav-end d-lg-flex d-block align-items-center py-lg-0 py-1">
+                    <div class="d-flex mx-2">
+                        <div class="icon">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <select class="select-dir">
+                            <option value="en">English</option>
+                            <option value="ar">Spanish</option>
+                        </select>
+                    </div>
+                    <div class="mx-lg-0 mx-2">
+                        <a class="btn btn--base mt-3 mt-lg-0" href="signin.html">Login <i class="fa-solid fa-right-to-bracket"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- ==================== Header End Here ==================== --> 
+<!--========================== Banner Section Start ==========================-->
+<section class="banner-section">
+  <div class="shape1">
+    <img src="assets/images/shape/shape1.png" alt="image" />
+  </div>
+  <div class="banner-thumb">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-12">
+          <div class="content">
+            <h1>
+              Explore a Universe of Books
+              <img
+                id="banner-image"
+                src="assets/images/banner/banner_1.png"
+                alt="image"
+              />
+              & <span>Stories.</span>
+            </h1>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="thumb">
+            <img src="assets/images/banner/banner_2.png" alt="image" />
+            <div class="search">
+              <form action="#" class="form-area">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="controls row">
+                      <div class="col-6">
+                        <input
+                          type="text"
+                          id="search-bar"
+                          placeholder="Search books by title..."
+                          class="form--control"
+                        />
+                      </div>
+                      <div class="col-6">
+                        <select id="genre-filter" class="form--control form-select">
+                          <option value="">All Genres</option>
+                          <option value="Fiction">Fiction</option>
+                          <option value="Drama">Drama</option>
+                          <option value="Philosophy">Philosophy</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--========================== Banner Section End ==========================-->
+
+
+<!--========================== book start ==========================-->
+<section class="books-list py-80">
+  <div class="container">
+    <div class="title">
+      <p class="sub">Bookly</p>
+      <h3>All Books</h3>
+    </div>
+    <div id="books-container" class="books-container row gy-4"></div>
+    <div id="loading-spinner" style="display: none">Loading...</div>
+    <nav class="d-flex justify-content-center my-5">
+      <ul class="pagination">
+        <li class="page-item">
+          <span class="page-link" id="prev-page"> &lt; </span>
+        </li>
+        <li class="page-item">
+          <span class="page-link active" id="current-page">1</span>
+        </li>
+        <li class="page-item">
+          <span class="page-link" id="next-page">&gt;</span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+<!--========================== book end ==========================-->
+
+<!-- Footer -->
+<footer class="footer-section">
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="footer-logo">
+          <a class="site-logo" href="index.html">
+            <img src="assets/images/logo/logo-two.png" alt="logo">
+          </a>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#">Cookie Policy</a>
+          </li>
+          <li>
+            <a href="#">Terms &amp; Conditions</a>
+          </li>
+        </ul>
+        <div class="copyright-area">
+          <p> Copyright © 2024 <span>Bookly</span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!-- Jquery js -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<!-- Popper js -->
+<script src="assets/js/popper.min.js"></script>
+<!-- Bootstrap Js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- Slick js -->
+<script src="assets/js/slick.min.js"></script>
+<!-- Magnific Popup js -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<!-- Odometer js -->
+<script src="assets/js/odometer.min.js"></script>
+<!-- Viewport js -->
+<script src="assets/js/viewport.jquery.js"></script>
+<!-- main js -->
+<script src="assets/js/main.js"></script>
+<!-- smooth scroll js -->
+<script src="assets/js/smoothscroll.min.js"></script>
+<!-- apexcharts js -->
+<script src="assets/js/apexcharts.min.js"></script>
+<!-- lightcase js-->
+<script src="assets/js/lightcase.js"></script>
+<!-- wow js -->
+<script src="assets/js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+</body>
+
+</html>

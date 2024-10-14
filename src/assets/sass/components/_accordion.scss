@@ -1,0 +1,126 @@
+/*=========================== Accodion style start =============================*/
+.custom--accordion {
+    background-color: hsl(var(--white));
+    border-radius: 10px;
+    z-index: 2;
+
+    .accordion-item {
+        background-color: hsl(var(--black) / .02) !important;
+        overflow: hidden;
+        border-bottom: 0;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+
+    .accordion-body {
+        background-color: transparent !important;
+        padding: 5px 5px 13px 15px;
+
+        .text {
+            max-width: 60%;
+
+            @include msm-screen {
+                max-width: 100%;
+            }
+        }
+    }
+
+    // &:first-of-type .accordion-button.collapsed {
+    //     border-radius: 5px;
+    // }
+
+    // &:last-of-type .accordion-button.collapsed {
+    //     border-radius: 5px;
+    // }
+
+    .number {
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+        background-color: hsl(var(--base));
+        margin-left: 15px;
+        font-size: 18px;
+        font-weight: 500;
+        color: hsl(var(--white));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .accordion-button {
+        background-color: transparent !important;
+        color: var(--dark);
+        font-size: 18px;
+        padding: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+
+
+
+        @include msm-screen {
+            font-size: 18px;
+            padding: 13px;
+            padding-right: 30px;
+        }
+
+        &::after {
+            background-image: none;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:not(.collapsed) {
+            color: hsl(var(--dark));
+            background-color: transparent !important;
+            box-shadow: none;
+
+
+            &::after {
+                transform: rotate(0deg);
+                background-image: none;
+                color: hsl(var(--dark));
+                ;
+            }
+        }
+
+        &[aria-expanded="true"],
+        &[aria-expanded="false"] {
+            &::after {
+                font-family: "Line Awesome Free";
+                content: "\f068";
+                display: inline-block;
+                position: relative;
+                font: var(--fa-font-solid);
+                margin-left: auto;
+                right: 15px;
+                color: hsl(var(--base));
+                font-size: 18px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: hsl(var(--base) / .1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include msm-screen {
+                    right: -13px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &[aria-expanded="false"] {
+            &::after {
+                content: "\f067";
+                color: hsl(var(--base));
+            }
+        }
+    }
+
+}

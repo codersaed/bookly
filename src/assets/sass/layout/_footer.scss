@@ -1,0 +1,70 @@
+/*============= Footer Start Here =======================*/
+.footer-section {
+  background-color: hsl(var(--base));
+
+  .site-logo {
+    img {
+      width: 120px;
+    }
+  }
+}
+
+.footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px 0;
+
+  @media only screen and (max-width: 991px) {
+    display: block;
+  }
+}
+
+.footer-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: -20px;
+  a {
+    color: hsl(var(--white)/0.8);
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 991px) {
+    margin: -7px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.footer-list li {
+  margin: 15px;
+  font-size: 14px;
+  color: hsl(var(--white)/0.8);
+  text-transform: capitalize;
+  letter-spacing: 1px;
+
+  @media only screen and (max-width: 991px) {
+    margin: 8px;
+  }
+}
+
+.copyright-area {
+  p {
+    font-size: 14px;
+    color: hsl(var(--white)/0.8);
+    font-weight: 600;
+  }
+
+  span {
+    color: hsl(var(--white)/0.8);
+  }
+}

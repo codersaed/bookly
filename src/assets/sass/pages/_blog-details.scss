@@ -1,0 +1,88 @@
+  /*=================== Blog Details =========*/
+
+  .blog-details {
+      overflow: hidden;
+      height: 100%;
+      padding-right: 30px;
+
+      @include md-screen {
+          padding-right: 0px;
+      }
+
+      h3 {
+          margin-top: 35px;
+      }
+
+      p {
+          margin-bottom: 10px;
+      }
+
+      .thumb {
+          height: 500px;
+          max-height: 100%;
+
+          @include md-screen {
+              height: 350px;
+          }
+
+          @include sm-screen {
+              height: 300px;
+          }
+
+          img {
+              @include fit_image;
+              border-radius: 10px;
+              object-fit: cover;
+          }
+      }
+
+      h5 {
+          margin-bottom: 0;
+          margin-right: 20px;
+      }
+
+      .social {
+          display: flex;
+
+          a {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              border: 1px solid hsl(var(--base));
+              line-height: 40px;
+              text-align: center;
+              color: hsl(var(--base));
+              margin-right: 10px;
+
+              &:hover {
+                  background-color: hsl(var(--base));
+                  color: hsl(var(--white));
+              }
+          }
+      }
+  }
+
+  blockquote {
+      background-color: hsl(var(--base) / .05);
+      padding: 60px 20px 20px;
+      border-radius: 5px;
+      border-left: 3px solid hsl(var(--base));
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: 400;
+      position: relative;
+      margin-top: 30px;
+
+      &::before {
+          content: "\f10e";
+          position: absolute;
+          font-family: "Line Awesome Free";
+          font-weight: 900;
+          font-size: 141px;
+          top: -95px;
+          right: 50%;
+          z-index: -1;
+          opacity: .4;
+          transform: translateX(39%);
+      }
+  }

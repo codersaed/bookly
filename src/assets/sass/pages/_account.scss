@@ -1,0 +1,168 @@
+  /*=================== Account =========*/
+
+  .account {
+      overflow: hidden;
+      height: 100vh;
+      overflow-y: scroll;
+      align-items: center;
+      display: flex;
+      background-color: hsl(var(--base)/0.02);
+
+      .unactive {
+          background-color: transparent;
+          color: hsl(var(--base));
+      }
+
+      .account-form {
+          overflow: hidden;
+          position: relative;
+          box-shadow: 0px 4px 91.4px 0px rgba(141, 141, 141, 0.13);
+          padding: 30px;
+          border-radius: 10px;
+          background-color: hsl(var(--white));
+
+          .logo {
+              display: flex;
+              justify-content: center;
+
+              img {
+                  width: 150px;
+                  margin-bottom: 20px;
+              }
+          }
+
+          .form--label {
+              color: hsl(var(--dark));
+          }
+
+          ::placeholder {
+              color: hsl(var(--dark)/0.7);
+          }
+
+          .form--control {
+              color: hsl(var(--dark)/0.7);
+              background-color: transparent;
+              border-radius: 7px !important;
+          }
+
+          .text {
+              color: hsl(var(--dark)/0.7) !important;
+          }
+
+          .form--control[type=password] {
+              color: hsl(var(--dark)/0.7) !important;
+          }
+
+          .social {
+              display: flex;
+              justify-content: center;
+
+              .icon {
+                  background-color: hsl(var(--base)/0.05);
+                  color: hsl(var(--base));
+                  border: 1px solid hsl(var(--base)/0);
+                  width: 50px;
+                  margin-right: 12px;
+                  height: 50px;
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-bottom: 20px;
+
+                  &:hover {
+                      background-color: transparent;
+                      border: 1px solid hsl(var(--base));
+                  }
+
+                  &:last-child {
+                      margin-right: 0;
+                  }
+
+                  i {
+                      font-size: 20px;
+                  }
+              }
+          }
+
+
+          .password-show-hide {
+              color: hsl(var(--dark)/0.7);
+          }
+
+          @include lg-screen {
+              padding: 40px 30px;
+          }
+
+          @include md-screen {
+              padding: 35px 25px;
+          }
+
+          @include sm-screen {
+              padding: 30px 20px;
+          }
+
+          @include xsm-screen {
+              padding: 30px 15px;
+          }
+
+          .social-login {
+              margin-top: 20px;
+
+              .card {
+                  border: 1px solid hsl(var(--dark)/0.1);
+                  padding: 10px;
+
+                  img {
+                      width: 20px;
+                      height: 20px;
+                      margin-right: 10px
+                  }
+
+                  h6 {
+                      margin-bottom: 0;
+                      font-weight: 400;
+                  }
+
+              }
+
+          }
+
+          .form--check .form-check-input {
+              border: 1px solid hsl(var(--dark)/0.5);
+          }
+
+          .hr {
+              line-height: 1em;
+              position: relative;
+              outline: 0;
+              border: 0;
+              color: hsl(var(--dark));
+              text-align: center;
+              height: 1.5em;
+              opacity: .8;
+
+              &:before {
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  top: 50%;
+                  width: 100%;
+                  height: 1px;
+                  border: 1px dashed hsl(var(--dark)/0.3);
+              }
+
+              &:after {
+                  content: attr(data-content);
+                  position: relative;
+                  display: inline-block;
+                  color: hsl(var(--dark));
+                  padding: 0 .5em;
+                  font-weight: 700;
+                  line-height: 1.5em;
+                  color: hsl(var(--dark));
+                  background-color: hsl(var(--white));
+              }
+          }
+      }
+  }

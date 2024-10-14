@@ -1,0 +1,49 @@
+// all section
+
+.books-list {
+  overflow: hidden;
+
+  #loading-spinner {
+    font-size: 18px;
+    color: hsl(var(--base));
+    font-weight: 600;
+  }
+
+  .card {
+    border: none;
+    background-color: hsl(var(--base) / 0.1);
+    padding: 12px;
+    border-radius: 16px;
+    img {
+      border-radius: 8px;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    h5 {
+      margin-bottom: 7px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 5px 20px;
+      background-color: hsl(var(--base));
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+ 
+
+    button:disabled {
+      background-color: #ccc;
+    }
+  }
+}

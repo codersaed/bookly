@@ -1,0 +1,14 @@
+.faq {
+    overflow: hidden;
+    position: relative;
+    .shape1 {
+        position: absolute;
+        top: 10rem;
+        left: 0;
+        z-index: -1;
+        img {
+            width: 70%;
+            opacity: 0.08;
+        }
+    }
+}

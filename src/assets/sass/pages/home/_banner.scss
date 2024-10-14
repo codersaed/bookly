@@ -1,0 +1,180 @@
+/*============= Banner area start  =============*/
+.banner-section {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: hsl(var(--black)/0.05);
+
+    @media only screen and (max-width: 586px) {
+        margin: 0;
+    }
+
+
+    .shape1 {
+        position: absolute;
+        right: 0;
+        z-index: -1;
+
+        img {
+            width: 70%;
+            display: flex;
+            margin: 0 0 0 auto;
+        }
+    }
+
+    .banner-thumb {
+        padding-top: 9rem;
+        padding-bottom: 6rem;
+
+        @media only screen and (max-width: 767px) {
+            padding-top: 8rem;
+            padding-bottom: 28rem;
+        }
+
+        .thumb {
+            margin-top: 30px;
+            position: relative;
+            isolation: isolate;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                background: hsl(var(--dark)/0.6);
+                opacity: .7;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                border-radius: 30px;
+            }
+
+            .search {
+                position: absolute;
+                top: 50%;
+                left: 50px;
+                right: 50px;
+                transform: translate(-0%, -50%);
+                z-index: 11;
+
+                @media only screen and (max-width: 767px) {
+                  top: 180px;
+                  right: 8px;
+                  left: 8px;
+                }
+
+                .form-area {
+                    background-color: hsl(var(--white));
+                    border-radius: 12px;
+                    padding: 15px 20px;
+                    box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 6px -1px, rgba(0, 0, 0, 0.01) 0px 2px 4px -1px;
+                   
+                }
+
+            }
+
+            img {
+                width: 100%;
+                border-radius: 30px;
+
+                @media only screen and (max-width: 767px) {
+                    display: none;
+                }
+            }
+        }
+
+        .content {
+            z-index: 99;
+            position: relative;
+
+
+            h1 {
+                color: hsl(var(--black));
+                padding: 0;
+                font-size: 110px;
+                font-weight: 900;
+                text-transform: capitalize;
+                margin: auto;
+
+                img {
+                    width: 150px;
+                    opacity: 0.7;
+                }
+
+                span {
+                    color: hsl(var(--base));
+                    animation: color-change 4s ease-in-out infinite;
+                }
+
+                @include md-screen {
+                    font-size: 52px;
+                }
+
+                @include sm-screen {
+                    font-size: 40px;
+                }
+            }
+
+
+            p {
+                width: 70%;
+                padding-top: 10px;
+                color: hsl(var(--black)/0.9);
+
+                @include sm-screen {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}
+
+.title {
+    margin-bottom: 30px;
+
+    h3 {
+        font-size: 55px;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+
+        span {
+            color: hsl(var(--base));
+            animation: color-change 4s ease-in-out infinite;
+        }
+
+        @include md-screen {
+            font-size: 50px;
+        }
+
+        @include sm-screen {
+            font-size: 40px;
+        }
+    }
+
+    .sub {
+        text-align: center;
+        border: 1px solid hsl(var(--black)/0.2);
+        width: fit-content;
+        margin: auto;
+        padding: 1px 15px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+}
+
+@keyframes color-change {
+    0% {
+        color: hsl(var(--base));
+    }
+
+    50% {
+        color: hsl(var(--base-two));
+    }
+
+    100% {
+        color: hsl(var(--base));
+    }
+}
